@@ -102,7 +102,7 @@
   margin: auto;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s;
+  /*transition: opacity 0.5s;*/
 }
 
 .profile__modal-open {
@@ -129,11 +129,14 @@
 }
 
 .profile__modal-cerrar {
+  width: 40px;
+  height: 40px;
   background: transparent;
   border: 0;
   position: absolute;
   right: -40px;
   top: -40px;
+  transition: opacity 0.5s;
 }
 
 .profile__modal-cerrar:hover {
@@ -153,7 +156,6 @@
 
 .profile__modal-input {
   width: 358px;
-  opacity: 25%;
   font-family: "Inter";
   font-weight: 400;
   font-size: 14px;
@@ -167,7 +169,7 @@
 .profile__guardar-button {
   width: 358px;
   height: 50.15px;
-  background: #ffffff;
+  background: #000;
   border: 1px solid #c4c4c4;
   font-family: "Inter";
   font-weight: 400;
@@ -177,7 +179,13 @@
   text-align: center;
   color: #c4c4c4;
   border-radius: 10px;
+  cursor: pointer;
 }
+
+.profile__guardar-button:hover {
+  opacity: 80%;
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .profile {
     width: 282px;
@@ -213,6 +221,7 @@
     letter-spacing: 0%;
     text-align: center;
   }
+
   .profile__text {
     width: 282px;
     height: 50px;
@@ -223,6 +232,7 @@
     letter-spacing: 0%;
     text-align: center;
   }
+
   .profile__header {
     display: flex;
     flex-direction: column;
@@ -231,5 +241,38 @@
 
   .profile__add-button {
     width: 282px;
+  }
+
+  .profile__modal-content {
+    width: 282px;
+    height: 322px;
+  }
+
+  .profile__modal-cerrar {
+    width: 26px;
+    height: 26px;
+    right: 22px;
+    top: -50px;
+  }
+
+  .profile__modal-input {
+    width: 238px;
+    height: 26px;
+  }
+
+  .profile__guardar-button {
+    width: 238px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 16.94px;
+  }
+
+  .profile__modal-text {
+    width: 238px;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 75px;
+    font-size: 18px;
+    line-height: 21.78px;
   }
 }
