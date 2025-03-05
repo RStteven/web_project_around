@@ -1,13 +1,15 @@
-let profileModal = document.querySelector(".profile__modal");
-let profileModalForm = document.querySelector(".profile__modal-form");
-let profileModalCerrar = document.querySelector(".profile__modal-cerrar");
-let profileInfoButton = document.querySelector(".profile__info-button");
-let profileModalOpen = document.querySelector(".profile__modal-open");
-let profileModalInput = document.querySelectorAll(".profile__modal-input");
-let profileName = document.querySelector(".profile__name");
-let profileText = document.querySelector(".profile__text");
+const profileModal = document.querySelector(".profile__modal");
+const profileModalForm = document.querySelector(".profile__modal-form");
+const profileModalCerrar = document.querySelector(".profile__modal-cerrar");
+const profileInfoButton = document.querySelector(".profile__info-button");
+const profileModalOpen = document.querySelector(".profile__modal-open");
+const profileModalInput = document.querySelectorAll(".profile__modal-input");
+const profileName = document.querySelector(".profile__name");
+const profileText = document.querySelector(".profile__text");
 
 function handleOpenModal() {
+  profileModalInput[0].value = profileName.textContent;
+  profileModalInput[1].value = profileText.textContent;
   profileModal.classList.add("profile__modal-open");
 }
 
